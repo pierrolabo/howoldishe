@@ -1,8 +1,13 @@
 {
   "name": "api",
   "version": "1.0.0",
+  "description": "howoldishe backend",
   "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
   "repository": "https://bitbucket.org/bardamuffin/howoldishe_api/src",
+
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",

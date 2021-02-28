@@ -1,0 +1,21 @@
+{
+  "name": "howoldishe",
+  "version": "1.0.0",
+  "description": "Never wondered how old an actor was when he acted in a movie ?",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierrolabo/howoldishe.git"
+  },
+  "author": "pierrolabo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pierrolabo/howoldishe/issues"
+  },
+  "homepage": "https://github.com/pierrolabo/howoldishe#readme"
+}
