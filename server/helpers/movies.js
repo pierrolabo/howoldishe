@@ -2,7 +2,7 @@ require('dotenv').config();
 const axios = require('axios');
 const key = process.env.API_KEY;
 const lang = 'fr-FR';
-
+console.log(key)
 //  Return all the details we need about a movie and its actors
 async function getMovieDetails(id) {
   const movie = {};
