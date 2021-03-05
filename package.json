@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/pierrolabo/howoldishe/issues"
   },
-  "homepage": "https://github.com/pierrolabo/howoldishe#readme"
+  "homepage": "https://github.com/pierrolabo/howoldishe#readme",
+  "dependencies": {
+    "concurrently": "^6.0.0"
+  }
 }
