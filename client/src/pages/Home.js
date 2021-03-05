@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import { Row } from 'react-materialize';
 import Search from '../component/Search/Search';
-import MovieCard from '../component/MovieCard/MovieCard';
+import MovieCardPreview from '../component/MovieCards/MovieCardPreview';
 
 import './Home.scss';
 const URL = 'http://localhost:2000/api/movies';
@@ -37,9 +37,9 @@ const Home = () => {
       <Row style={{ padding: '0rem 2rem' }}>
         {topMovies &&
           topMovies.map((item) => {
-            return <MovieCard {...item} />;
+            return <MovieCardPreview {...item} />;
           })}
-        <MovieCard />
+        <MovieCardPreview />
       </Row>
     </section>
   );

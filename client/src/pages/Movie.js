@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { API_URL } from '../constants/Constants';
 import { Row } from 'react-materialize';
+import MovieCardDetail from '../component/MovieCards/MovieCardDetail';
 
 const Movie = () => {
   const { id } = useParams();
@@ -18,7 +19,12 @@ const Movie = () => {
       console.log(err);
     }
   }, []);
-  return <Row></Row>;
+  console.log(movie);
+  return (
+    <Row>
+      <MovieCardDetail {...{ ...movie.details, ...movie.cast }} />
+    </Row>
+  );
 };
 
 export default Movie;
