@@ -22,7 +22,7 @@ const Movie = () => {
   console.log(movie);
   return (
     <Row>
-      <MovieCardDetail {...{ ...movie.details, ...movie.cast }} />
+      {movie && <MovieCardDetail {...{ ...movie.details, ...movie.cast }} />}
     </Row>
   );
 };
