@@ -1,0 +1,22 @@
+.moviedetail {
+  width: 100%;
+  padding: 1rem !important;
+  &__card {
+    margin: 0 auto;
+    & .card-content {
+      max-height: 38% !important;
+    }
+    @media (min-width: 600px) {
+      display: flex;
+      max-width: 848px !important;
+      max-height: 838px !important;
+      height: auto !important;
+      .card-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 70% !important;
+      }
+    }
+  }
+}

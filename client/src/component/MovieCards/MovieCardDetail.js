@@ -8,16 +8,16 @@ import { IMG_URL, IMG_SIZE_POSTER } from '../../constants/Constants';
 const MovieCardDetail = ({ title, backdrop_path, overview, release_data }) => {
   const img = `${IMG_URL}/${IMG_SIZE_POSTER}${backdrop_path}`;
   return (
-    <Col style={{ marginTop: '50px' }}>
+    <Col style={{ marginTop: '50px' }} className="moviedetail">
       <Card
-        className="horizontal"
+        className="moviedetail__card small"
         header={
           <CardTitle image={img}>
             <span>{title}</span>
           </CardTitle>
         }
       >
-        <p>{overview}</p>
+        <p className="moviedetail__card--overview">{overview}</p>
       </Card>
     </Col>
   );
