@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { API_URL } from '../constants/Constants';
-import { Row, Col } from 'react-materialize';
+import { Row, Preloader } from 'react-materialize';
 import MovieCardDetail from '../component/MovieCards/MovieCardDetail';
 import ActorCard from '../component/ActorCard/ActorCard';
 import './Movie.scss';
@@ -24,6 +24,15 @@ const Movie = () => {
   return (
     <>
       <Row>
+        {isLoading ? (
+          <Preloader
+            active
+            color="blue"
+            flashing={false}
+            size="big"
+            className="movie--loader"
+          />
+        ) : null}
         {movie && <MovieCardDetail {...{ ...movie.details, ...movie.cast }} />}
       </Row>
       <Row className="moviesdetails__container">
