@@ -2,7 +2,7 @@ require('dotenv').config();
 const axios = require('axios');
 const { json } = require('body-parser');
 const key = process.env.API_KEY;
-const lang = 'en_US';
+const lang = 'fr';
 console.log(key);
 
 exports.getTopTrendingMovies = async (req, res) => {
