@@ -1,5 +1,5 @@
 import { Row } from 'react-materialize';
-
+import './Layout.scss';
 const Layout = (props) => {
   return (
     <section className="home">
