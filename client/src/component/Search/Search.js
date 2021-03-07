@@ -29,7 +29,12 @@ const Search = () => {
       axios
         .get(`${API_URL}/${input}`)
         .then((res) => {
-          setMovies(res.data.results);
+          let parsedMovies = res.data.results;
+          //  Remove movies without picture or resume
+          parsedMovies = parsedMovies.filter(
+            (movie) => movie.backdrop_path && movie.overview
+          );
+          setMovies(parsedMovies);
           setLoading(false);
         })
         .catch(function (error) {
