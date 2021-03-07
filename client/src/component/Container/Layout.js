@@ -4,7 +4,7 @@ const Layout = (props) => {
   return (
     <section className="home">
       <Row>
-        <a href="#home">
+        <a href="/">
           <h1 className="home--title center-align">How old is he ?</h1>
         </a>
       </Row>
