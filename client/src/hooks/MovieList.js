@@ -12,7 +12,12 @@ const MovieListProvider = (props) => {
   useEffect(() => {
     try {
       axios.get(`${API_URL}/top`).then((res) => {
-        setMovies(res.data.results);
+        let parsedMovies = res.data.results;
+        //  Remove movies without picture or resume
+        parsedMovies = parsedMovies.filter(
+          (movie) => movie.backdrop_path && movie.overview
+        );
+        setMovies(parsedMovies);
         setLoading(false);
       });
     } catch (err) {
