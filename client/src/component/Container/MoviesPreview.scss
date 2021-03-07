@@ -1,0 +1,15 @@
+.moviespreview {
+  padding: 0rem 2rem;
+  &--loader {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  &--noresults {
+    text-align: center;
+    color: gray;
+  }
+}
