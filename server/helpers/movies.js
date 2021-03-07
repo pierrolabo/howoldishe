@@ -1,8 +1,21 @@
 require('dotenv').config();
 const axios = require('axios');
+const { json } = require('body-parser');
 const key = process.env.API_KEY;
-const lang = 'fr-FR';
-console.log(key)
+const lang = 'en_US';
+console.log(key);
+
+exports.getTopTrendingMovies = async (req, res) => {
+  console.log('got top request');
+  try {
+    let movies = await axios.get(
+      ` https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=${lang}&page=1`
+    );
+    res.json(movies.data);
+  } catch (error) {
+    console.log('Error => getTopTrendingMovies ', error);
+  }
+};
 //  Return all the details we need about a movie and its actors
 async function getMovieDetails(id) {
   const movie = {};
@@ -22,7 +35,7 @@ async function getMovieDetails(id) {
 //  add peoples details to the cast object
 async function addPeopleInfoToCast(cast) {
   let arr = Array.from(cast.cast);
-  let newArr = await arr.map(async people => {
+  let newArr = await arr.map(async (people) => {
     let peopleDetail = await getPeople(people.id);
     people.birthday = peopleDetail.birthday;
     people.deathday = peopleDetail.deathday;
@@ -51,13 +64,13 @@ async function getPeople(id) {
 }
 
 // Return the full movie details
-exports.getMovie = async function(req, res) {
+exports.getMovie = async function (req, res) {
   const id = req.params.id;
   const movie = await getMovieDetails(id);
   res.json(movie);
 };
 //  Request the API for movies matching the keyword
-exports.searchMovies = function(req, res) {
+exports.searchMovies = function (req, res) {
   let keyword = req.params.keyword;
 
   axios
@@ -66,12 +79,12 @@ exports.searchMovies = function(req, res) {
         keyword
       )}&page=1&include_adult=false`
     )
-    .then(data => {
+    .then((data) => {
       console.log('OK => searchMovies: ');
       //console.log(data.data);
       res.json(data.data);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log('ERROR => searchMovies: ');
       console.log(err);
       res.send(err);
@@ -79,7 +92,7 @@ exports.searchMovies = function(req, res) {
 };
 
 //  Request the API for peoples matching the keyword
-exports.searchPeoples = function(req, res) {
+exports.searchPeoples = function (req, res) {
   let keyword = req.params.keyword;
 
   axios
@@ -88,12 +101,12 @@ exports.searchPeoples = function(req, res) {
         keyword
       )}&page=1&include_adult=false`
     )
-    .then(data => {
+    .then((data) => {
       console.log('OK => getPeoples: ');
       console.log(data.data);
       res.json(data.data);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log('ERROR => getPeoples: ');
       console.log(err);
       res.send(err);

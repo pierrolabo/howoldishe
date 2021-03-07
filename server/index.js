@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/movies', movieRoutes);
-
 app.listen(PORT, () => {
   console.log('Running on port: ', PORT);
 });

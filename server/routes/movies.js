@@ -3,6 +3,7 @@ let router = express.Router();
 // let db = require('../models');
 let helpers = require('../helpers/movies');
 
+router.route('/').get(helpers.getTopTrendingMovies);
 router.route('/:keyword').get(helpers.searchMovies);
 
 //router.route('/movie/:id').get(helpers.getMovie);
