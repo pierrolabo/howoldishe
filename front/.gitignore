@@ -49,7 +49,7 @@ node_modules/
 ../front/
 >>>>>>> API_getDetails
 jspm_packages/
-
+*.css
 # TypeScript v1 declaration files
 typings/
 

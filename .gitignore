@@ -23,3 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 dist/css/MovieCardDetail.css.map
 dist/css/MovieCardDetail.css
+dist/css/Movie.css.map
+dist/css/Movie.css
+dist/css/ActorCard.css.map
+dist/css/ActorCard.css
