@@ -1,7 +1,6 @@
 //  BUG FIX "M is not defined"
-import M from 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
-import { Card, Col, Icon, CardTitle } from 'react-materialize';
+import { Card, Col, CardTitle } from 'react-materialize';
 import { IMG_URL, IMG_SIZE } from '../../constants/Constants';
 import './ActorCard.scss';
 

@@ -6,6 +6,7 @@ import { Row, Preloader } from 'react-materialize';
 
 import './MoviesPreview.scss';
 const MoviesPreview = () => {
+  // eslint-disable-next-line no-unused-vars
   const [movies, setMovies, isLoading, setLoading] = useContext(
     MovieListContext
   );
@@ -26,7 +27,7 @@ const MoviesPreview = () => {
       {!isLoading &&
         movies &&
         movies.map((item) => {
-          return <MovieCardPreview {...item} />;
+          return <MovieCardPreview {...item} key={item.id} />;
         })}
     </Row>
   );

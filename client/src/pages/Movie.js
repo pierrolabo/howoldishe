@@ -20,6 +20,7 @@ const Movie = () => {
     } catch (err) {
       console.log(err);
     }
+    // eslint-disable-next-line
   }, []);
   return (
     <>
@@ -42,6 +43,7 @@ const Movie = () => {
             .filter((actor) => actor.profile_path && actor.birthday)
             .map((actor) => (
               <ActorCard
+                key={actor.id}
                 release={movie.details.release_date}
                 {...{ ...actor }}
               />

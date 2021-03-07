@@ -1,16 +1,18 @@
-import axios from 'axios';
-
 import { useState, useContext } from 'react';
-import { MovieListContext } from '../../hooks/MovieList';
 import { API_URL } from '../../constants/Constants';
-
+import axios from 'axios';
 //  BUG FIX "M is not defined"
+// eslint-disable-next-line no-unused-vars
+import M from 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
 import { TextInput, Col } from 'react-materialize';
+
+import { MovieListContext } from '../../hooks/MovieList';
 
 import './Search.scss';
 
 const Search = () => {
+  /* eslint-disable */
   const [search, setSearch] = useState('');
   const [
     movies,
@@ -20,6 +22,7 @@ const Search = () => {
     testVal,
     setTestVal,
   ] = useContext(MovieListContext);
+  /* eslint-enable */
 
   const doSearch = (input) => {
     //  Prevent sending request when user is erasing input and there's no letters left.

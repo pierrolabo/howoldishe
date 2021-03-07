@@ -29,3 +29,6 @@ dist/css/ActorCard.css.map
 dist/css/ActorCard.css
 dist/css/MoviesPreview.css
 dist/css/MoviesPreview.css.map
+client/src/component/Container/Layout.scss
+dist/css/Layout.css
+dist/css/Layout.css.map

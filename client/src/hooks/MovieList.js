@@ -11,12 +11,13 @@ const MovieListProvider = (props) => {
 
   useEffect(() => {
     try {
-      axios.get(`${API_URL}/top`).then((res) => {
+      axios.get(`${API_URL}/`).then((res) => {
         let parsedMovies = res.data.results;
         //  Remove movies without picture or resume
-        parsedMovies = parsedMovies.filter(
-          (movie) => movie.backdrop_path && movie.overview
-        );
+        parsedMovies = parsedMovies
+          .filter((movie) => movie.backdrop_path && movie.overview)
+          //  Remove movies with title ridiculously long
+          .filter((movie) => movie.title.length <= 30);
         setMovies(parsedMovies);
         setLoading(false);
       });
