@@ -17,7 +17,6 @@ const Home = () => {
     } catch (err) {
       console.log(err);
     }
-    console.log(typeof topMovies);
   }, []);
   return (
     <section className="home">
