@@ -10,6 +10,7 @@
 }
 .moviesdetails__container {
   padding: 0 2rem !important;
+  display: block;
   @media (min-width: 850px) {
     padding: 0 4rem !important;
   }

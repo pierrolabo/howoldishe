@@ -31,7 +31,7 @@ const ActorCard = ({
   };
 
   return (
-    <Col xs={12} s={6} m={3} l={2} xl={2} className="moviedetails__cast">
+    <Col xs={12} s={6} m={3} l={4} xl={2} className="moviedetails__cast">
       <Card
         className="moviedetails__cast__card small"
         header={
