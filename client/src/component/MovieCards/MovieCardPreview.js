@@ -9,7 +9,7 @@ const MovieCardPreview = ({ id, title, overview, backdrop_path }) => {
   const handleOnClick = () => history.push(`/movie/${id}`);
   const img = `${IMG_URL}/${IMG_SIZE}${backdrop_path}`;
   return (
-    <Col xl={2} m={6} s={12} className="moviecard">
+    <Col s={12} m={6} l={4} xl={2} className="moviecardpreview">
       <Card
         onClick={handleOnClick}
         header={

@@ -1,17 +1,15 @@
 @import '../../styles//variables';
 
-.moviecard {
-    &:hover {
-        cursor: pointer;
-
-    }
+.moviecardpreview {
+  &:hover {
+    cursor: pointer;
+  }
 }
 .card-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: #fff !important;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff !important;
 }
