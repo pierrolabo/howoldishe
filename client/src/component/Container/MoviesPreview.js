@@ -10,6 +10,7 @@ const MoviesPreview = () => {
   const [movies, setMovies, isLoading, setLoading] = useContext(
     MovieListContext
   );
+
   return (
     <Row className="moviespreview">
       {isLoading ? (
@@ -26,7 +27,8 @@ const MoviesPreview = () => {
       ) : null}
       {!isLoading &&
         movies &&
-        movies.map((item) => {
+        movies.map((item, i) => {
+          if (i === 11) return null;
           return <MovieCardPreview {...item} key={item.id} />;
         })}
     </Row>
