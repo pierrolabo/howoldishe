@@ -5,7 +5,7 @@ import axios from 'axios';
 // eslint-disable-next-line no-unused-vars
 import M from 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
-import { TextInput, Col } from 'react-materialize';
+import { TextInput, Col, Container } from 'react-materialize';
 
 import { MovieListContext } from '../../hooks/MovieList';
 
@@ -54,7 +54,7 @@ const Search = () => {
     doSearch(input);
   };
   return (
-    <Col xs={8} s={12} m={12} l={9} className="search valign-wrapper">
+    <Col xs={8} s={12} m={12} l={12} className="search">
       <TextInput
         className="search--input"
         label="Search a movie"

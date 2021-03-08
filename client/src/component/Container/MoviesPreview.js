@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { MovieListContext } from '../../hooks/MovieList';
 import 'materialize-css/dist/css/materialize.min.css';
 import MovieCardPreview from '../MovieCards/MovieCardPreview';
-import { Row, Preloader } from 'react-materialize';
+import { Row, Preloader, Container } from 'react-materialize';
 
 import './MoviesPreview.scss';
 const MoviesPreview = () => {

@@ -34,11 +34,7 @@ const ActorCard = ({
     <Col xs={12} s={6} m={3} l={4} xl={2} className="moviedetails__cast">
       <Card
         className="moviedetails__cast__card small"
-        header={
-          <CardTitle image={img}>
-            <span className="moviedetails__cast__card--title">{character}</span>
-          </CardTitle>
-        }
+        header={<CardTitle image={img}></CardTitle>}
       >
         <div
           style={{ display: 'flex', flexDirection: 'column' }}
@@ -47,7 +43,9 @@ const ActorCard = ({
           <span className="moviedetails__cast__card--info--playedAtAge badge red">
             {playedAtAge(release, birthday)}
           </span>
-          <span className="moviedetails__cast__card--info--name">{name}</span>
+          <span className="moviedetails__cast__card--info--name">
+            {name}: {character}
+          </span>
           <div className="moviedetails__cast__card--card-action card-action">
             <span
               className={`moviedetails__cast__card--info--age ${

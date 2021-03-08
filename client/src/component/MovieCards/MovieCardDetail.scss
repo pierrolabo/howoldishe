@@ -3,10 +3,33 @@
   padding: 1rem !important;
   &__card {
     margin: 0 auto;
+    & .card-image img {
+      height: 100%;
+      max-height: 300px;
+      @media (max-width: 588px) {
+        max-height: 250px;
+      }
+    }
     & .card-content {
       max-height: 38% !important;
+      padding: 1rem;
     }
-    @media (min-width: 600px) {
+    &--title {
+      text-align: center;
+      width: 100%;
+      display: block;
+      font-weight: bold;
+
+      @media (min-width: 588px) {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+    &--overview {
+      margin-top: 1.6rem !important;
+    }
+
+    @media (min-width: 588px) {
       display: flex;
       max-width: 848px !important;
       max-height: 838px !important;

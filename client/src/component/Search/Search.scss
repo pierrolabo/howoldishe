@@ -1,8 +1,11 @@
 @import '../../styles/variables';
 
 .search {
-    margin-top: 4rem;
-    @media(min-width: $breakpoint-desktop) {
-        margin-top: 10.5rem;
-    }
+  margin: 4rem 4rem;
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 10.5rem;
+  }
+  & .input-field {
+    width: 100% !important;
+  }
 }

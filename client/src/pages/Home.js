@@ -1,5 +1,5 @@
 import 'materialize-css/dist/css/materialize.min.css';
-import { Row } from 'react-materialize';
+import { Row, Container } from 'react-materialize';
 import { MovieListProvider } from '../hooks/MovieList';
 
 import Search from '../component/Search/Search';
@@ -11,10 +11,14 @@ const Home = () => {
   return (
     <>
       <MovieListProvider>
-        <Row>
-          <Search />
-        </Row>
-        <MoviesPreview />
+        <Container>
+          <Row>
+            <Search />
+          </Row>
+          <Row>
+            <MoviesPreview />
+          </Row>
+        </Container>
       </MovieListProvider>
     </>
   );
