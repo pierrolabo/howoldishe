@@ -32,3 +32,5 @@ dist/css/MoviesPreview.css.map
 client/src/component/Container/Layout.scss
 dist/css/Layout.css
 dist/css/Layout.css.map
+dist/css/MovieCardPreview.css
+dist/css/MovieCardPreview.css.map
