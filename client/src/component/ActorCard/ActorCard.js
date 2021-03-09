@@ -43,7 +43,7 @@ const ActorCard = ({
           <p className="">
             <span className="moviedetails__cast__card--info--playedAtAge badge red">
 
-            {`🎥 ${playedAtAge(release, birthday)} 🎥`}
+            {`🎥 ${playedAtAge(release, birthday)}`}
             </span>
           </p>
           <p className="moviedetails__cast__card--info--name">
@@ -57,7 +57,7 @@ const ActorCard = ({
               {deathday ? (
                 <FontAwesomeIcon icon={faSkull} />
               ) : (
-                `❤ ${getCurrentAge(birthday)} ❤`
+                `❤ ${getCurrentAge(birthday)}`
               )}
 
               </span>
