@@ -34,31 +34,34 @@ const ActorCard = ({
     <Col xs={12} s={6} m={3} l={4} xl={2} className="moviedetails__cast">
       <Card
         className="moviedetails__cast__card small"
-        header={<CardTitle image={img}></CardTitle>}
+        header={<CardTitle image={img}>{character}</CardTitle>}
       >
         <div
           style={{ display: 'flex', flexDirection: 'column' }}
           className="moviedetails__cast__card--info"
         >
-          <span className="moviedetails__cast__card--info--playedAtAge badge red">
-            {playedAtAge(release, birthday)}
-          </span>
-          <span className="moviedetails__cast__card--info--name">
-            {name}: {character}
-          </span>
-          <div className="moviedetails__cast__card--card-action card-action">
-            <span
-              className={`moviedetails__cast__card--info--age ${
-                deathday ? 'badge black dead' : `badge green`
-              }`}
+          <p className="">
+            <span className="moviedetails__cast__card--info--playedAtAge badge red">
+
+            {`🎥 ${playedAtAge(release, birthday)} 🎥`}
+            </span>
+          </p>
+          <p className="moviedetails__cast__card--info--name">
+            {name}
+          </p>
+            <p       
             >
+              <span className={`moviedetails__cast__card--info--age ${
+                deathday ? 'badge black dead' : `badge green`
+              }`}>
               {deathday ? (
                 <FontAwesomeIcon icon={faSkull} />
               ) : (
-                getCurrentAge(birthday)
+                `❤ ${getCurrentAge(birthday)} ❤`
               )}
-            </span>
-          </div>
+
+              </span>
+            </p>
         </div>
       </Card>
     </Col>
